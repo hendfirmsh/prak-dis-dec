@@ -94,9 +94,6 @@ Tetapkan perilaku standar dari git pull. Pilih default saja yaitu Fast-forward o
 
 
 
-
-
-
 Memilih credential helper.
 
 <img src="images/10_CredentialHelper_Git.png" width="700">
@@ -113,13 +110,20 @@ Install
 
 Tunggu hingga proses instalasi selesai kemudian klik:
 Finish
+
 <img src="images/13_FinishInstall_Git.png" width="700">
+
 9. Mengecek Instalasi
 Buka CMD kemudian jalankan:
 Git :
+
 <img src="images/14_CekInstallasi_Git.png" width="700">
+
 Lihat versi dari Git git –version :
+
 <img src="images/15_CekVersion_Git.png" width="700">
+
+
 Versi yang muncul dapat berbeda tergantung versi Git yang terpasang pada komputer.
 Penjelasan:
 Perintah git --version digunakan untuk mengetahui versi Git yang sedang terpasang. Jika nomor versi muncul, berarti Git telah berhasil terinstal dan dapat digunakan.
