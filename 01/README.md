@@ -56,7 +56,9 @@ Beberapa editor yang dapat digunakan antara lain:
 •	Notepad++
 •	Vim
 •	editor lainnya.
+
 <img src="images/03_TextEditor_Git.png" width="700">
+
 Untuk mahasiswa Informatika, Visual Studio Code dapat dipilih karena lebih mudah digunakan untuk mengedit source code.
 
 5. Menentukan Nama Branch Utama
