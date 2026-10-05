@@ -430,6 +430,7 @@ cd praktikum-sistem-terdistribusi
 Perintah `cd` atau **change directory** digunakan untuk berpindah ke folder repository yang telah di-*clone*.
 Setelah berada di dalam folder tersebut, perintah Git dapat digunakan untuk mengelola repository lokal.
 Struktur repository dapat diperiksa untuk memastikan file dan folder yang diperlukan telah berhasil dibuat.
+
 ---
 
 # PRAKTIK 5 — MEMBUAT DAN MENGUBAH FILE
@@ -485,7 +486,6 @@ File dibuat / diubah
 ```
 
 Pada tahap Praktik 5, perubahan masih berada pada repository lokal dan belum dikirim ke repository GitHub. Proses `add`, `commit`, dan `push` akan digunakan pada tahap berikutnya.
-
 
 
 
