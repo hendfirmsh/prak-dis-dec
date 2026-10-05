@@ -320,6 +320,218 @@ Dari hasil tersebut dapat diperiksa apakah:
 
 ---
 
+---
+
+# PRAKTIK 3 — MEMBUAT REPOSITORY GITHUB
+
+Setelah memahami dasar Git dan melakukan konfigurasi Git, langkah berikutnya adalah membuat repository pada GitHub.
+
+Repository GitHub akan digunakan sebagai **repository remote** untuk menyimpan project dan melakukan sinkronisasi dengan repository lokal.
+
+## 1. Login ke GitHub
+
+Buka website GitHub melalui browser, kemudian login menggunakan akun GitHub yang telah dimiliki.
+
+![Login GitHub](images/20_LoginGitHub_Repo.png)
+
+**Penjelasan:**
+
+Login diperlukan agar pengguna dapat membuat dan mengelola repository pada akun GitHub.
+
+---
+
+## 2. Membuat Repository Baru
+
+Setelah berhasil login, buat repository baru dengan langkah berikut:
+
+1. Klik tanda **+** pada bagian kanan atas halaman GitHub.
+2. Pilih **New repository**.
+3. Masukkan nama repository.
+4. Tambahkan deskripsi repository jika diperlukan.
+5. Tentukan visibility repository, yaitu **Public** atau **Private**.
+6. Klik **Create repository**.
+
+![Membuat Repository Baru](images/21_MembuatRepoBaru_Repo.png)
+
+### Contoh Nama dan Deskripsi Repository
+
+Nama repository dapat disesuaikan dengan kebutuhan project.
+
+![Nama dan Deskripsi Repository](images/22_NamaDanDeskripsi_Repo.png)
+
+**Penjelasan:**
+
+Nama repository digunakan sebagai identitas project pada GitHub. Deskripsi dapat digunakan untuk memberikan informasi singkat mengenai isi atau tujuan repository.
+
+Repository dapat dibuat dengan dua pilihan visibility:
+
+* **Public** — repository dapat dilihat oleh pengguna lain.
+* **Private** — repository hanya dapat diakses oleh pengguna yang memiliki izin.
+
+---
+
+## 3. Hasil Pembuatan Repository
+
+Setelah proses pembuatan repository berhasil, GitHub akan menampilkan halaman repository yang telah dibuat.
+
+![Hasil Repository](images/23_HasilRepo_Repo.png)
+
+Repository tersebut akan menjadi **repository remote** yang digunakan untuk menyimpan project secara online.
+
+Repository kosong dapat dibuat terlebih dahulu, kemudian repository tersebut dapat di-*clone* ke komputer lokal untuk mulai digunakan.
+
+---
+
+# PRAKTIK 4 — CLONE REPOSITORY
+
+Setelah repository berhasil dibuat pada GitHub, repository tersebut dapat disalin ke komputer lokal menggunakan perintah `git clone`.
+
+## 1. Clone Repository
+
+Gunakan perintah:
+
+```bash
+git clone <URL-REPOSITORY>
+```
+
+Contoh:
+```bash
+git clone https://github.com/username/nama-repository.git
+```
+
+![Clone Repository](images/24_CloneRepo_Repo.png)
+
+**Penjelasan:**
+Perintah `git clone` digunakan untuk membuat salinan repository remote dari GitHub ke komputer lokal.
+Dengan melakukan clone, pengguna akan mendapatkan:
+* File yang terdapat pada repository.
+* Riwayat commit.
+* Informasi repository Git.
+* Hubungan antara repository lokal dan repository remote.
+
+---
+
+## 2. Masuk ke Folder Repository
+
+Setelah proses clone selesai, masuk ke folder repository menggunakan perintah:
+
+```bash
+cd nama-repository
+```
+
+Contoh:
+
+```bash
+cd praktikum-sistem-terdistribusi
+```
+
+![Tree Git](images/25_TreeGit_Repo.png)
+
+**Penjelasan:**
+Perintah `cd` atau **change directory** digunakan untuk berpindah ke folder repository yang telah di-*clone*.
+Setelah berada di dalam folder tersebut, perintah Git dapat digunakan untuk mengelola repository lokal.
+Struktur repository dapat diperiksa untuk memastikan file dan folder yang diperlukan telah berhasil dibuat.
+---
+
+# PRAKTIK 5 — MEMBUAT DAN MENGUBAH FILE
+
+Setelah repository berhasil di-*clone*, tahap berikutnya adalah membuat atau mengubah file yang berada di dalam folder repository.
+## 1. Membuat File Baru
+Buat sebuah file baru di dalam folder repository.
+Contoh file:
+
+```text
+README.md
+```
+
+atau file lain sesuai dengan kebutuhan praktikum.
+
+![Update File](images/26_UpdateFile_Repo.png)
+
+**Penjelasan:**
+File yang dibuat atau diubah di dalam repository lokal akan terdeteksi oleh Git sebagai perubahan (*changes*).
+Perubahan tersebut belum langsung tersimpan ke dalam riwayat Git. Untuk melihat perubahan yang terdeteksi oleh Git, gunakan perintah `git status`.
+
+---
+
+## 2. Mengecek Status Repository
+Gunakan perintah:
+
+```bash
+git status
+```
+
+![Git Status](images/27_GitStatus_Repo.png)
+
+**Penjelasan:**
+Perintah `git status` digunakan untuk mengetahui kondisi repository saat ini.
+Git akan memberikan informasi mengenai file yang:
+* Baru dibuat.
+* Telah diubah.
+* Dihapus.
+* Belum dimasukkan ke staging area.
+* Sudah berada di staging area.
+Contoh alur perubahan file:
+
+```text
+File dibuat / diubah
+        ↓
+   git status
+        ↓
+   git add
+        ↓
+   git commit
+        ↓
+   git push
+```
+
+Pada tahap Praktik 5, perubahan masih berada pada repository lokal dan belum dikirim ke repository GitHub. Proses `add`, `commit`, dan `push` akan digunakan pada tahap berikutnya.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p align="center">
 
