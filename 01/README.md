@@ -62,7 +62,7 @@ Perintah tersebut akan menampilkan versi Git yang terpasang pada komputer.
 ### 2. Download Git
 Git dapat diunduh melalui website resmi Git.
 
-![Download Git](images/01_Download_Git.png)
+<img src="images/01_Download_Git.png" width="700">
 
 Setelah installer berhasil diunduh, jalankan file installer tersebut dengan melakukan **double click**.
 
@@ -74,7 +74,7 @@ Pada halaman awal installer, klik:
 Kemudian tentukan lokasi instalasi Git. Jika tidak ada kebutuhan khusus, lokasi default dapat digunakan.
 Selanjutnya akan muncul pilihan komponen. Pada tahap ini dapat menggunakan pilihan default.
 
-![Components Git](images/02_Components_Git.png)
+<img src="images/02_Components_Git.png" width="700">
 
 **Penjelasan:**
 Pada bagian ini pengguna dapat menentukan komponen tambahan yang akan dipasang bersama Git. Untuk kebutuhan praktikum, pengaturan bawaan installer dapat digunakan.
@@ -89,8 +89,7 @@ Beberapa editor yang dapat digunakan antara lain:
 * Vim
 * Editor lainnya
 
-![Text Editor Git](images/03_TextEditor_Git.png)
-
+<img src="images/03_TextEditor_Git.png" width="700">
 **Penjelasan:**
 Untuk mahasiswa Informatika, Visual Studio Code dapat dipilih karena lebih mudah digunakan untuk mengedit source code maupun file dokumentasi.
 
@@ -102,7 +101,7 @@ Branch utama dapat menggunakan:
 ```text
 main
 ```
-![Branch Git](images/04_Branch_Git.png)
+<img src="images/04_Branch_Git.png" width="700">
 
 **Penjelasan:**
 Branch merupakan jalur pengembangan dalam Git. Penggunaan nama `main` sesuai dengan penggunaan branch utama pada banyak repository GitHub modern dan digunakan dalam praktikum ini.
@@ -112,7 +111,7 @@ Branch merupakan jalur pengembangan dalam Git. Penggunaan nama `main` sesuai den
 ### 6. Menentukan PATH Git
 Pada pilihan penggunaan Git dari command line, gunakan pilihan yang memungkinkan Git digunakan melalui command prompt maupun Git Bash.
 
-![PATH Git](images/05_PATH_Git.png)
+<img src="images/05_PATH_Git.png" width="700">
 
 **Penjelasan:**
 Dengan pengaturan tersebut, perintah Git dapat dijalankan melalui beberapa terminal pada Windows seperti Command Prompt, PowerShell, maupun Git Bash.
@@ -122,7 +121,7 @@ Dengan pengaturan tersebut, perintah Git dapat dijalankan melalui beberapa termi
 ### 7. Mengatur HTTPS
 Untuk koneksi repository GitHub, Git dapat menggunakan HTTPS.
 
-![HTTPS Git](images/06_HTTPS_Git.png)
+<img src="images/06_HTTPS_Git.png" width="700">
 
 Pada installer Git for Windows, gunakan pilihan library HTTPS yang direkomendasikan oleh installer.
 
@@ -131,7 +130,8 @@ Pada installer Git for Windows, gunakan pilihan library HTTPS yang direkomendasi
 ### 8. Konversi Line Ending
 Pada tahap berikutnya dilakukan pengaturan konversi akhir baris atau **line ending**.
 
-![Line Ending](images/07_EndingConversions_Git.png)
+<img src="images/07_EndingConversions_Git.png" width="700">
+
 
 **Penjelasan:**
 Line ending merupakan karakter yang digunakan untuk menandai akhir sebuah baris pada file teks. Pengaturan ini membantu menjaga kompatibilitas file ketika digunakan pada sistem operasi yang berbeda.
@@ -141,7 +141,7 @@ Line ending merupakan karakter yang digunakan untuk menandai akhir sebuah baris 
 ### 9. Pemilihan Terminal
 Pilih **MinTTY** sebagai terminal yang digunakan untuk mengakses Git Bash.
 
-![Terminal MinTTY](images/08_TerminalMinTTY_Git.png)
+<img src="images/08_TerminalMinTTY_Git.png" width="700">
 
 **Penjelasan:**
 Git Bash menyediakan lingkungan terminal yang dapat digunakan untuk menjalankan perintah Git pada Windows.
@@ -154,7 +154,7 @@ Pada praktikum ini digunakan pilihan default:
 
 **Fast-forward or merge**
 
-![Git Pull Merge](images/09_GitPullMarge_Git.png)
+<img src="images/09_GitPullMarge_Git.png" width="700">
 
 **Penjelasan:**
 Pengaturan ini menentukan bagaimana Git menangani perubahan dari repository remote ketika perintah `git pull` dijalankan. Pembahasan lebih lanjut mengenai proses merge akan dipelajari pada materi berikutnya.
@@ -164,7 +164,7 @@ Pengaturan ini menentukan bagaimana Git menangani perubahan dari repository remo
 ### 11. Memilih Credential Helper
 Pada tahap ini dilakukan pemilihan credential helper.
 
-![Credential Helper](images/10_CredentialHelper_Git.png)
+<img src="images/10_CredentialHelper_Git.png" width="700">
 
 **Penjelasan:**
 Credential helper digunakan untuk membantu proses autentikasi ketika Git berkomunikasi dengan repository remote.
@@ -174,7 +174,7 @@ Credential helper digunakan untuk membantu proses autentikasi ketika Git berkomu
 ### 12. Pengaturan Extra Options
 Pada opsi tambahan, aktifkan **file system caching**.
 
-![Extra Options Git](images/11_ExtraOptions_Git.png)
+<img src="images/11_ExtraOptions_Git.png" width="700">
 
 **Penjelasan:**
 File system caching dapat membantu meningkatkan performa Git ketika mengakses sistem file.
@@ -185,14 +185,13 @@ File system caching dapat membantu meningkatkan performa Git ketika mengakses si
 Setelah seluruh konfigurasi selesai, klik:
 **Install**
 
-![Install Git](images/12_InstallGit_Git.png)
-
+<img src="images/12_InstallGit_Git.png" width="700">
 Tunggu hingga proses instalasi selesai.
 Setelah proses selesai, klik:
 
 **Finish**
 
-![Finish Install Git](images/13_FinishInstall_Git.png)
+<img src="images/13_FinishInstall_Git.png" width="700">
 
 **Penjelasan:**
 Tahap ini menandakan bahwa seluruh komponen Git telah selesai dipasang pada komputer.
@@ -203,7 +202,7 @@ Tahap ini menandakan bahwa seluruh komponen Git telah selesai dipasang pada komp
 Setelah instalasi selesai, buka **Command Prompt**, PowerShell, atau Git Bash.
 Kemudian lakukan pengecekan instalasi Git.
 
-![Cek Instalasi Git](images/14_CekInstallasi_Git.png)
+<img src="images/14_CekInstallasi_Git.png" width="700">
 
 **Penjelasan:**
 Pengecekan dilakukan untuk memastikan bahwa sistem operasi sudah dapat mengenali perintah Git.
@@ -217,7 +216,7 @@ Untuk melihat versi Git yang terpasang, jalankan perintah:
 git --version
 ```
 
-![Cek Versi Git](images/15_CekVersion_Git.png)
+<img src="images/15_CekVersion_Git.png" width="700">
 
 **Penjelasan:**
 Perintah `git --version` digunakan untuk mengetahui versi Git yang sedang terpasang.
@@ -239,7 +238,7 @@ Konfigurasi username Git dilakukan menggunakan perintah:
 git config --global user.name "Nama Anda"
 ```
 
-![Konfigurasi Username](images/16_Username_Configurasi.png)
+<img src="images/16_Username_Configurasi.png" width="700">
 
 **Penjelasan:**
 Perintah `git config` digunakan untuk mengatur konfigurasi Git.
@@ -267,7 +266,7 @@ Konfigurasi email dilakukan menggunakan perintah:
 git config --global user.email "email@example.com"
 ```
 
-![Konfigurasi User Email](images/17_UserEmail_Configurasi.png)
+<img src="images/17_UserEmail_Configurasi.png" width="700">
 
 **Penjelasan:**
 Email digunakan sebagai salah satu identitas pengguna Git dan akan dicatat pada setiap commit.
@@ -282,7 +281,7 @@ Branch default dapat diatur menjadi `main` menggunakan perintah:
 git config --global init.defaultBranch main
 ```
 
-![Konfigurasi Branch](images/18_Branch_Configurasi.png)
+<img src="images/18_Branch_Configurasi.png" width="700">
 
 **Penjelasan:**
 Konfigurasi tersebut menentukan bahwa ketika repository baru dibuat menggunakan:
@@ -308,7 +307,7 @@ Untuk melihat konfigurasi Git yang telah tersimpan, jalankan:
 git config --list
 ```
 
-![Cek Konfigurasi Git](images/19_CekConfig_Configurasi.png)
+<img src="images/19_CekConfig_Configurasi.png" width="700">
 
 **Penjelasan:**
 Perintah `git config --list` digunakan untuk menampilkan konfigurasi Git yang tersimpan pada komputer.
@@ -332,7 +331,7 @@ Repository GitHub akan digunakan sebagai **repository remote** untuk menyimpan p
 
 Buka website GitHub melalui browser, kemudian login menggunakan akun GitHub yang telah dimiliki.
 
-![Login GitHub](images/20_LoginGitHub_Repo.png)
+<img src="images/20_LoginGitHub_Repo.png" width="700">
 
 **Penjelasan:**
 
@@ -351,13 +350,13 @@ Setelah berhasil login, buat repository baru dengan langkah berikut:
 5. Tentukan visibility repository, yaitu **Public** atau **Private**.
 6. Klik **Create repository**.
 
-![Membuat Repository Baru](images/21_MembuatRepoBaru_Repo.png)
+<img src="images/21_MembuatRepoBaru_Repo.png" width="700">
 
 ### Contoh Nama dan Deskripsi Repository
 
 Nama repository dapat disesuaikan dengan kebutuhan project.
 
-![Nama dan Deskripsi Repository](images/22_NamaDanDeskripsi_Repo.png)
+<img src="images/22_NamaDanDeskripsi_Repo.png" width="700">
 
 **Penjelasan:**
 
@@ -374,7 +373,7 @@ Repository dapat dibuat dengan dua pilihan visibility:
 
 Setelah proses pembuatan repository berhasil, GitHub akan menampilkan halaman repository yang telah dibuat.
 
-![Hasil Repository](images/23_HasilRepo_Repo.png)
+<img src="images/23_HasilRepo_Repo.png" width="700">
 
 Repository tersebut akan menjadi **repository remote** yang digunakan untuk menyimpan project secara online.
 
@@ -399,7 +398,7 @@ Contoh:
 git clone https://github.com/username/nama-repository.git
 ```
 
-![Clone Repository](images/24_CloneRepo_Repo.png)
+<img src="images/24_CloneRepo_Repo.png" width="700">
 
 **Penjelasan:**
 Perintah `git clone` digunakan untuk membuat salinan repository remote dari GitHub ke komputer lokal.
@@ -425,7 +424,7 @@ Contoh:
 cd praktikum-sistem-terdistribusi
 ```
 
-![Tree Git](images/25_TreeGit_Repo.png)
+<img src="images/25_TreeGit_Repo.png" width="700">
 
 **Penjelasan:**
 Perintah `cd` atau **change directory** digunakan untuk berpindah ke folder repository yang telah di-*clone*.
@@ -446,7 +445,7 @@ README.md
 
 atau file lain sesuai dengan kebutuhan praktikum.
 
-![Update File](images/26_UpdateFile_Repo.png)
+<img src="images/26_UpdateFile_Repo.png" width="700">
 
 **Penjelasan:**
 File yang dibuat atau diubah di dalam repository lokal akan terdeteksi oleh Git sebagai perubahan (*changes*).
@@ -461,7 +460,7 @@ Gunakan perintah:
 git status
 ```
 
-![Git Status](images/27_GitStatus_Repo.png)
+<img src="images/27_GitStatus_Repo.png" width="700">
 
 **Penjelasan:**
 Perintah `git status` digunakan untuk mengetahui kondisi repository saat ini.
