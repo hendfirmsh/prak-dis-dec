@@ -38,6 +38,7 @@ Materi yang diamati menyediakan beberapa pilihan instalasi Git. Untuk Windows, i
 2. Download Git
 Git dapat diunduh dari website resmi Git.
 <img src="images/01_Download_Git.png" width="700">
+
 Setelah installer berhasil diunduh, jalankan file installer tersebut dengan melakukan double click.
 
 3. Proses Instalasi
@@ -66,16 +67,19 @@ Pada instalasi Git terdapat pilihan nama branch awal.
 Branch utama dapat menggunakan:
 Main
 <img src="images/04_Branch_Git.png" width="700">
+
 Penggunaan main sesuai dengan kebiasaan repository GitHub modern dan juga digunakan dalam materi praktikum.
 
 6. Menentukan PATH Git
 Pada pilihan penggunaan Git dari command line, gunakan pilihan yang memungkinkan Git digunakan dari command prompt maupun Git Bash.
 <img src="images/05_PATH_Git.png" width="700">
+
 Dengan demikian, Git dapat dijalankan melalui beberapa terminal di Windows.
 
 7. HTTPS
 Untuk koneksi repository GitHub, Git dapat menggunakan HTTPS.
 <img src="images/06_HTTPS_Git.png" width="700">
+
 Pada installer Git for Windows, gunakan pilihan library HTTPS yang direkomendasikan oleh installer.
 
 
@@ -125,7 +129,45 @@ Lihat versi dari Git git –version :
 
 <img src="images/15_CekVersion_Git.png" width="700">
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9ae8461 (Menambahkan praktik 2 Konfigurasi Git)
 Versi yang muncul dapat berbeda tergantung versi Git yang terpasang pada komputer.
 Penjelasan:
 Perintah git --version digunakan untuk mengetahui versi Git yang sedang terpasang. Jika nomor versi muncul, berarti Git telah berhasil terinstal dan dapat digunakan.
+
+
+PRAKTIK 2 – KONFIGURASI GIT
+Setelah Git berhasil diinstal, langkah berikutnya adalah melakukan konfigurasi identitas pengguna.
+Git perlu mengetahui nama dan email pengguna karena informasi tersebut akan dicatat pada setiap commit.
+1. Membuat Konfigurasi Nama
+Jalankan:
+<img src="images/16_Username_Configurasi.png" width="700">
+Penjelasan:
+git config digunakan untuk mengatur konfigurasi Git.
+Parameter:
+--global
+berarti konfigurasi tersebut berlaku secara global untuk pengguna komputer.
+Sedangkan:
+user.name
+digunakan untuk menentukan nama pengguna yang akan tercatat dalam commit.
+Materi praktikum juga menjelaskan bahwa konfigurasi nama dan email cukup dilakukan sekali, kecuali pengguna ingin mengubahnya.
+
+2. Membuat Konfigurasi Email
+Gunakan:
+<img src="images/17_UserEmail_Configurasi.png" width="700">
+Email sebaiknya menggunakan email yang digunakan pada akun GitHub.
+
+3. Mengatur Branch Default
+Branch default dapat diatur menjadi main menggunakan:
+<img src="images/18_Branch_Configurasi.png" width="700">
+Dengan konfigurasi tersebut, ketika repository baru dibuat menggunakan git init, branch awal akan menggunakan nama main.
+
+
+4. Mengecek Konfigurasi
+Untuk melihat konfigurasi Git:
+git config --list
+<img src="images/19_CekConfig_Configurasi.png" width="700">
+Penjelasan:
+Perintah tersebut digunakan untuk memastikan bahwa nama, email, dan branch default telah dikonfigurasi dengan benar.
