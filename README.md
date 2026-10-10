@@ -35,22 +35,22 @@ Dokumentasi dibuat menggunakan **Markdown** agar laporan dapat dibaca langsung m
 
 ## 🗂️ Daftar Praktikum
 
-| Minggu | Modul               |       Status       | Dokumentasi                |
-| :----: | ------------------- | :----------------: | -------------------------- |
-| **01** | Git dan GitHub      |      ✅ Selesai     | [📖 Lihat Modul 01](./01/) |
-| **02** | Praktikum Minggu 02 | ⏳ Belum dikerjakan | [📖 Modul 02](./02/)       |
-| **03** | Praktikum Minggu 03 | ⏳ Belum dikerjakan | [📖 Modul 03](./03/)       |
-| **04** | Praktikum Minggu 04 | ⏳ Belum dikerjakan | [📖 Modul 04](./04/)       |
-| **05** | Praktikum Minggu 05 | ⏳ Belum dikerjakan | [📖 Modul 05](./05/)       |
-| **06** | Praktikum Minggu 06 | ⏳ Belum dikerjakan | [📖 Modul 06](./06/)       |
-| **07** | Praktikum Minggu 07 | ⏳ Belum dikerjakan | [📖 Modul 07](./07/)       |
-| **08** | Praktikum Minggu 08 | ⏳ Belum dikerjakan | [📖 Modul 08](./08/)       |
-| **09** | Praktikum Minggu 09 | ⏳ Belum dikerjakan | [📖 Modul 09](./09/)       |
-| **10** | Praktikum Minggu 10 | ⏳ Belum dikerjakan | [📖 Modul 10](./10/)       |
-| **11** | Praktikum Minggu 11 | ⏳ Belum dikerjakan | [📖 Modul 11](./11/)       |
-| **12** | Praktikum Minggu 12 | ⏳ Belum dikerjakan | [📖 Modul 12](./12/)       |
-| **13** | Praktikum Minggu 13 | ⏳ Belum dikerjakan | [📖 Modul 13](./13/)       |
-| **14** | Praktikum Minggu 14 | ⏳ Belum dikerjakan | [📖 Modul 14](./14/)       |
+| Minggu |          Modul          |       Status         |        Dokumentasi         |
+| :----: | :---------------------: | :------------------: | :------------------------: |
+| **01** | Git dan GitHub          |      ✅ Selesai     | [📖 Modul 01](./01/)       |
+| **02** | Komunikasi Antar Proses |      ✅ Selesai     | [📖 Modul 02](./02/)       |
+| **03** | Praktikum Minggu 03     | ⏳ Belum dikerjakan | [📖 Modul 03](./03/)       |
+| **04** | Praktikum Minggu 04     | ⏳ Belum dikerjakan | [📖 Modul 04](./04/)       |
+| **05** | Praktikum Minggu 05     | ⏳ Belum dikerjakan | [📖 Modul 05](./05/)       |
+| **06** | Praktikum Minggu 06     | ⏳ Belum dikerjakan | [📖 Modul 06](./06/)       |
+| **07** | Praktikum Minggu 07     | ⏳ Belum dikerjakan | [📖 Modul 07](./07/)       |
+| **08** | Praktikum Minggu 08     | ⏳ Belum dikerjakan | [📖 Modul 08](./08/)       |
+| **09** | Praktikum Minggu 09     | ⏳ Belum dikerjakan | [📖 Modul 09](./09/)       |
+| **10** | Praktikum Minggu 10     | ⏳ Belum dikerjakan | [📖 Modul 10](./10/)       |
+| **11** | Praktikum Minggu 11     | ⏳ Belum dikerjakan | [📖 Modul 11](./11/)       |
+| **12** | Praktikum Minggu 12     | ⏳ Belum dikerjakan | [📖 Modul 12](./12/)       |
+| **13** | Praktikum Minggu 13     | ⏳ Belum dikerjakan | [📖 Modul 13](./13/)       |
+| **14** | Praktikum Minggu 14     | ⏳ Belum dikerjakan | [📖 Modul 14](./14/)       |
 
 > **Catatan:** Nama materi pada minggu 02–14 akan diperbarui sesuai modul praktikum yang diberikan.
 
@@ -142,35 +142,6 @@ Beberapa tools yang digunakan dalam pengerjaan dan dokumentasi praktikum antara 
 
 ---
 
-## 🔄 Workflow Git
-
-Proses pengelolaan repository menggunakan alur dasar Git:
-
-```text
-┌───────────────┐
-│  Membuat File │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│  git status   │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│   git add     │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│   git commit  │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│    git push   │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│    GitHub     │
-└───────────────┘
-```
 
 Perintah dasar yang digunakan:
 
@@ -185,7 +156,6 @@ git push origin main
 ---
 
 ## 🌱 Branch dan Kolaborasi
-
 Repository ini juga menjadi sarana untuk memahami workflow kolaborasi menggunakan Git dan GitHub.
 
 Alur kolaborasi:
@@ -223,7 +193,7 @@ Progress repository akan diperbarui setiap kali sebuah modul selesai dikerjakan.
 
 ```text
 Modul 01  ████████████████████  100%
-Modul 02  ░░░░░░░░░░░░░░░░░░░░    0%
+Modul 02  ████████████████████  100%
 Modul 03  ░░░░░░░░░░░░░░░░░░░░    0%
 Modul 04  ░░░░░░░░░░░░░░░░░░░░    0%
 Modul 05  ░░░░░░░░░░░░░░░░░░░░    0%
@@ -238,7 +208,7 @@ Modul 13  ░░░░░░░░░░░░░░░░░░░░    0%
 Modul 14  ░░░░░░░░░░░░░░░░░░░░    0%
 ```
 
-**Progress saat ini: 1 / 14 modul selesai.**
+**Progress saat ini: 2 / 14 modul selesai.**
 
 ---
 
@@ -274,31 +244,6 @@ README.md
 ```
 
 File tambahan seperti screenshot, source code, konfigurasi, atau hasil praktik dapat ditambahkan sesuai kebutuhan masing-masing modul.
-
----
-
-## 📖 Dokumentasi Modul
-
-### 🟢 Modul 01 — Git dan GitHub
-
-Dokumentasi pertama membahas penggunaan Git dan GitHub, mulai dari instalasi Git, konfigurasi, pembuatan repository, penggunaan perintah dasar Git, hingga proses pengelolaan repository.
-
-➡️ **[Buka Dokumentasi Modul 01 →](./01/)**
-
----
-
-## 🚀 Repository Status
-
-| Komponen                     | Status               |
-| ---------------------------- | -------------------- |
-| Struktur repository          | ✅ Selesai            |
-| Direktori 01–14              | ✅ Selesai            |
-| Dokumentasi Modul 01         | ✅ Selesai            |
-| Screenshot Modul 01          | ✅ Selesai            |
-| Modul 02–14                  | ⏳ Menunggu praktikum |
-| Dokumentasi lengkap 14 modul | 🔄 Dalam proses      |
-
----
 
 ## 👨‍💻 Author
 
