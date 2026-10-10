@@ -175,7 +175,6 @@ Virtual environment digunakan untuk memisahkan paket yang dipasang untuk project
 Dengan demikian, instalasi Strawberry untuk praktikum tidak perlu bercampur dengan lingkungan Python project lain.
 
 ### Langkah 6. Memasang Strawberry GraphQL
-
 Pastikan berada di direktori workspace-01 dan environment telah aktif.
 Jalankan perintah :
 uv pip install 'strawberry-graphql[cli]'
@@ -202,9 +201,7 @@ Setelah file schema.py tersedia, buka terminal PowerShell di direktori workspace
 Pastikan environment sudah aktif.
 Periksa bantuan CLI Strawberry:
 Untuk file schema Python yang mendefinisikan objek schema, perintah CLI yang umum digunakan untuk menjalankan server adalah:
-
 strawberry dev schema
-
 Perintah tersebut berlaku jika file schema.py sesuai dengan struktur yang diharapkan CLI Strawberry. Jika file yang diberikan dosen memiliki cara menjalankan yang berbeda, ikuti petunjuk pada file atau materi aslinya.
 
 <img src="images/13_RunServer.png" width="700">
@@ -224,14 +221,12 @@ Jika server berjalan pada port 8000 dan endpoint /graphql tersedia, browser akan
 
 ### Langkah 10. Mengirimkan Query GraphQL
 Pada antarmuka GraphQL, modul meminta kamu memasukkan query berikut pada bagian kiri:
-
 {
   books {
     title
     author
   }
 }
-
 Kemudian klik tombol Run.
 bagian kiri digunakan untuk menuliskan query, sedangkan bagian kanan menampilkan hasil query.
 
@@ -242,7 +237,6 @@ Query tersebut meminta data buku melalui field books, dengan informasi title dan
 Jika query berhasil, server akan mengembalikan hasil yang sesuai dengan data dan schema yang tersedia pada schema.py.
 
 ### Langkah 11. Membuat Client untuk Mengakses GraphQL Server
-
 Tugas terakhir pada modul adalah membuat client menggunakan bahasa pemrograman bebas. Client tersebut harus mengakses GraphQL server yang telah dibuat.
 Agar tetap menggunakan Python dan tidak perlu memasang paket client tambahan, dapat menggunakan modul bawaan Python untuk mengirim HTTP POST.
 Buat file baru bernama client.py di direktori workspace-01.
@@ -250,7 +244,7 @@ Isi file tersebut dengan kode berikut:
 
 <img src="images/16_ClientPY.png" width="700">
 
-Penjelasan Kode Client
+Penjelasan Kode Client :
 
 1. Mengimpor library
 import json
