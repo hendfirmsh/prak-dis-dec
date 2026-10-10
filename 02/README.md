@@ -244,86 +244,26 @@ Jika query berhasil, server akan mengembalikan hasil yang sesuai dengan data dan
 ### Langkah 11. Membuat Client untuk Mengakses GraphQL Server
 
 Tugas terakhir pada modul adalah membuat client menggunakan bahasa pemrograman bebas. Client tersebut harus mengakses GraphQL server yang telah dibuat.
-
-Agar tetap menggunakan Python dan tidak perlu memasang paket client tambahan, kamu dapat menggunakan modul bawaan Python untuk mengirim HTTP POST.
-
+Agar tetap menggunakan Python dan tidak perlu memasang paket client tambahan, dapat menggunakan modul bawaan Python untuk mengirim HTTP POST.
 Buat file baru bernama client.py di direktori workspace-01.
-
 Isi file tersebut dengan kode berikut:
 
-import json
-from urllib.request import Request, urlopen
-from urllib.error import HTTPError, URLError
+<img src="images/16_ClientPY.png" width="700">
 
-
-URL = "http://localhost:8000/graphql"
-
-QUERY = """
-{
-    books {
-        title
-        author
-    }
-}
-"""
-
-
-def main():
-    payload = json.dumps({
-        "query": QUERY
-    }).encode("utf-8")
-
-    request = Request(
-        URL,
-        data=payload,
-        headers={
-            "Content-Type": "application/json"
-        },
-        method="POST"
-    )
-
-    try:
-        with urlopen(request, timeout=10) as response:
-            result = json.loads(
-                response.read().decode("utf-8")
-            )
-
-        print("Respons dari GraphQL server:")
-        print(json.dumps(result, indent=4, ensure_ascii=False))
-
-    except HTTPError as error:
-        print("HTTP error:", error.code)
-        print(error.read().decode("utf-8", errors="replace"))
-
-    except URLError as error:
-        print("Tidak dapat mengakses server:", error.reason)
-
-    except TimeoutError:
-        print("Permintaan ke server mengalami timeout.")
-
-
-if __name__ == "__main__":
-    main()
 Penjelasan Kode Client
 
 1. Mengimpor library
-
 import json
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
-
 Modul json digunakan untuk mengolah data JSON, sedangkan urllib digunakan untuk mengirim permintaan HTTP ke server.
-
 Library tersebut merupakan bagian dari Python sehingga tidak perlu dipasang secara terpisah.
 
 2. Menentukan alamat server
-
 URL = "http://localhost:8000/graphql"
-
 Variabel tersebut menyimpan alamat GraphQL server yang akan diakses.
 
 3. Menentukan query
-
 QUERY = """
 {
     books {
@@ -332,19 +272,15 @@ QUERY = """
     }
 }
 """
-
 Query meminta data buku, khususnya judul dan nama penulis.
 
 4. Menyiapkan data permintaan
-
 payload = json.dumps({
     "query": QUERY
 }).encode("utf-8")
-
 Query dimasukkan ke dalam objek JSON, kemudian diubah menjadi byte agar dapat dikirim melalui HTTP.
 
 5. Membuat permintaan HTTP
-
 request = Request(
     URL,
     data=payload,
@@ -353,122 +289,34 @@ request = Request(
     },
     method="POST"
 )
-
 Permintaan menggunakan metode POST dengan isi berupa JSON.
 
 6. Mengirim permintaan dan membaca respons
-
 with urlopen(request, timeout=10) as response:
     result = json.loads(
         response.read().decode("utf-8")
     )
-
 Client mengirim permintaan ke server, menerima respons, kemudian mengubah JSON respons menjadi objek Python.
 
 7. Menangani error
-
 Kode juga menangani HTTP error, kegagalan koneksi, dan timeout agar penyebab kegagalan dapat diketahui.
-
-Menjalankan Client
-
-Pastikan GraphQL server masih berjalan.
-
+Menjalankan Client .Pastikan GraphQL server masih berjalan.
 Buka terminal PowerShell kedua di direktori workspace-01, aktifkan environment jika diperlukan, kemudian jalankan:
-
 python client.py
-
 Jika semua konfigurasi benar, client akan menampilkan respons dari GraphQL server.
 
-Respons yang muncul bergantung pada data dan schema dalam schema.py.
+<img src="images/17_RunClient.png" width="700">
 
-Screenshot yang perlu disimpan:
-
-Ambil screenshot terminal yang menunjukkan perintah python client.py dan hasil respons yang sebenarnya.
-
-Nama file yang disarankan:
-
-10_GraphQL_Client.png
-
-Jika Client Tidak Berhasil
-
-Periksa beberapa hal berikut:
-
-Server masih berjalan.
-URL dan port sesuai dengan alamat server.
-Endpoint /graphql tersedia.
-Query sesuai dengan schema server.
-Python environment yang digunakan benar.
-
-Jangan langsung mengubah kode server apabila belum memeriksa pesan error yang muncul.
-
-Langkah 12. Menghentikan GraphQL Server
-
+### Langkah 12. Menghentikan GraphQL Server
 Setelah semua pengujian selesai, kembali ke terminal yang digunakan untuk menjalankan server.
-
 Tekan:
-
 Ctrl + C
+hentikan sarver menggunakan kombinasi tombol tersebut pada shell tempat Strawberry dijalankan.
 
-Modul secara eksplisit meminta server dihentikan menggunakan kombinasi tombol tersebut pada shell tempat Strawberry dijalankan.
+<img src="images/18_StopSarver.png" width="700">
 
 Penjelasan:
-
 Perintah tersebut menghentikan server yang berjalan di terminal. Langkah ini dilakukan setelah pengujian client selesai agar server tidak terus berjalan ketika sudah tidak diperlukan.
 
-D. Dokumentasi Praktikum di GitHub
-
-Karena laporanmu menggunakan repository GitHub, dokumentasikan setiap tahapan di 02/README.md, bukan di Word.
-
-Struktur folder yang disarankan:
-
-prak-dis-dec/
-└── 02/
-    ├── README.md
-    └── images/
-        ├── 01_TaskManager_Proses.png
-        ├── 02_Proses_Notepad.png
-        ├── 03_CekProses_PowerShell.png
-        ├── 04_MematikanProses_Notepad.png
-        ├── 05_RestartProses_Notepad.png
-        ├── 06_Install_Strawberry.png
-        ├── 07_GraphQL_Server.png
-        ├── 08_GraphQL_Playground.png
-        ├── 09_Query_GraphQL.png
-        └── 10_GraphQL_Client.png
-
-Nama file gambar di atas merupakan rekomendasi untuk dokumentasi, bukan nama yang diwajibkan dalam modul.
-
-Gunakan referensi Markdown seperti berikut:
-
-<p align="center">
-  <img src="images/01_TaskManager_Proses.png" width="700">
-</p>
-
-Kamu dapat menggunakan format tersebut untuk setiap screenshot agar tampilannya konsisten di GitHub.
-
-E. Hasil Praktikum
-
-Bagian ini dapat ditambahkan ke 02/README.md setelah seluruh tahapan selesai.
-
-Contoh format:
-
-Pengamatan proses Windows: proses yang berjalan pada komputer berhasil diamati melalui Task Manager dan PowerShell.
-Penghentian proses: proses Notepad dihentikan menggunakan perintah PowerShell, kemudian diperiksa kembali.
-Restart proses: Notepad dijalankan kembali setelah proses sebelumnya dihentikan.
-Persiapan lingkungan Python: workspace dan virtual environment disiapkan menggunakan uv.
-Instalasi Strawberry: paket Strawberry GraphQL dipasang pada environment praktikum.
-GraphQL server: server dijalankan menggunakan file schema.py yang disediakan.
-Pengujian query: query GraphQL dikirim melalui browser dan hasilnya diamati.
-Pengujian client: client mengirim query ke server dan menampilkan respons yang diterima.
-
-Catatan: Gunakan poin-poin tersebut hanya setelah kamu benar-benar menyelesaikan dan memverifikasi setiap tahap. Jika suatu tahap belum berhasil, tuliskan kondisi sebenarnya.
-
-F. Kesimpulan
-
-Kesimpulan berikut dapat kamu gunakan setelah semua praktik selesai.
-
-Praktikum Modul 2 membahas pengelolaan proses pada satu node dan komunikasi antarproses pada sistem terdistribusi. Pada bagian pertama, proses aplikasi diamati menggunakan Task Manager dan PowerShell. Praktikum juga menunjukkan bahwa proses aplikasi dapat dihentikan dan dijalankan kembali menggunakan perintah sistem operasi, tanpa harus menutup aplikasi melalui antarmukanya.
-
-Pada bagian kedua, komunikasi antara client dan server dipelajari melalui GraphQL menggunakan Python dan Strawberry. Lingkungan pengembangan disiapkan menggunakan uv, kemudian paket yang dibutuhkan dipasang untuk menjalankan GraphQL server. Query dikirim melalui browser untuk meminta data buku, sedangkan client dibuat untuk mengakses server dan menerima respons.
-
-Melalui praktikum ini, dapat dipahami bahwa komunikasi antarproses pada sistem terdistribusi memerlukan mekanisme pertukaran data antara proses yang dapat berjalan pada node berbeda. GraphQL menjadi salah satu pendekatan yang digunakan untuk memungkinkan client meminta data dari server melalui query yang sesuai dengan schema.
+# D. Kesimpulan
+Praktikum Modul 2 membahas pengelolaan proses pada satu node dan komunikasi antarproses pada sistem terdistribusi. Pada bagian pertama, proses aplikasi diamati menggunakan Task Manager dan PowerShell. Praktikum juga menunjukkan bahwa proses aplikasi dapat dihentikan dan dijalankan kembali menggunakan perintah sistem operasi, tanpa harus menutup aplikasi melalui antarmukanya. Pada bagian kedua, komunikasi antara client dan server dipelajari melalui GraphQL menggunakan Python dan Strawberry. Lingkungan pengembangan disiapkan menggunakan uv, kemudian paket yang dibutuhkan dipasang untuk menjalankan GraphQL server. Query dikirim melalui browser untuk meminta data buku, sedangkan client dibuat untuk mengakses server dan menerima respons. Melalui praktikum ini, dapat dipahami bahwa komunikasi antarproses pada sistem terdistribusi memerlukan mekanisme pertukaran data antara proses yang dapat berjalan pada node berbeda. GraphQL menjadi salah satu pendekatan yang digunakan untuk memungkinkan client meminta data dari server melalui query yang sesuai dengan schema.
