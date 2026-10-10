@@ -104,288 +104,125 @@ Periksa prosesnya:
     Get-Process -Name notepad
 Jika proses ditemukan, berarti Notepad sudah berjalan kembali.
 
+<img src="images/05_RestartProses_Notepad.png" width="700">
 
 Penjelasan:
 Langkah tersebut menunjukkan bahwa proses aplikasi dapat dihentikan dan dibuat kembali tanpa menggunakan perintah keluar dari aplikasi melalui antarmukanya.
 
-Screenshot yang perlu disimpan:
-
-Ambil screenshot yang menunjukkan proses Notepad berjalan kembali setelah dihentikan.
-
-Nama file yang disarankan:
-
-05_RestartProses_Notepad.png
-
-Langkah 6. Dokumentasi dan Penjelasan
-
-Setelah semua langkah selesai, pastikan kamu memiliki bukti untuk:
-
-Daftar proses pada Windows.
-Proses Notepad ketika sedang berjalan.
-Pemeriksaan proses melalui PowerShell.
-Penghentian proses Notepad.
-Proses Notepad setelah dijalankan kembali.
-
-Pada README.md, jelaskan apa yang kamu lakukan dan hasil yang benar-benar terlihat pada komputer.
-
-Jangan menuliskan hasil yang belum kamu periksa.
-
-PRAKTIK 2 — KOMUNIKASI ANTARPROSES PADA SISTEM TERDISTRIBUSI
-
-Pada bagian ini, kamu akan menggunakan Python dan Strawberry untuk membuat GraphQL server. Selanjutnya, kamu akan mengakses server melalui browser dan membuat client untuk meminta data dari server.
-
+## PRAKTIK 2 — KOMUNIKASI ANTARPROSES PADA SISTEM TERDISTRIBUSI
+Pada bagian ini, akan menggunakan Python dan Strawberry untuk membuat GraphQL server. Selanjutnya, kamu akan mengakses server melalui browser dan membuat client untuk meminta data dari server.
 Modul menetapkan penggunaan uv, workspace bernama workspace-01, Python versi 3.14, dan paket strawberry-graphql[cli].
 
-Langkah 1. Memeriksa Python
-
+### Langkah 1. Memeriksa Python
 Sebelum memulai, periksa apakah Python sudah tersedia di Windows.
-
 Buka PowerShell, kemudian jalankan:
-
 python --version
 
-Jika perintah tersebut tidak dikenali, coba:
-
-py --version
+<img src="images/06_CekVersi_Python.png" width="700">
 
 Penjelasan:
-
 Perintah tersebut digunakan untuk memeriksa apakah Python dapat dijalankan dari terminal.
-
 Modul meminta Python versi 3.14. Jika versi yang tersedia belum sesuai, kamu perlu menyiapkan versi tersebut sebelum melanjutkan.
 
-Periksa juga versi Python yang tersedia melalui Python Launcher:
-
-py -0p
-
-Jika Python 3.14 belum tersedia, kamu dapat menggunakan uv untuk memasangnya pada langkah berikutnya.
-
-Langkah 2. Memeriksa Instalasi uv
-
+### Langkah 2. Memeriksa Instalasi uv
 Modul meminta kamu mempelajari uv melalui panduan berikut:
-
 Panduan uv dari NEO-X-School
-
-Ikuti panduan tersebut untuk menyiapkan uv pada Windows.
-
 Setelah selesai, periksa instalasinya menggunakan:
-
 uv --version
 
-Jika versi uv muncul, perintah tersebut dapat dijalankan.
+<img src="images/07_InstallCekversi_UV.png" width="700">
 
 Penjelasan:
-
 uv merupakan alat untuk mengelola lingkungan dan paket Python. Dalam praktikum ini, uv digunakan untuk menyiapkan Python, membuat environment, dan memasang paket yang diperlukan.
 
-Jika perintah uv tidak dikenali, selesaikan terlebih dahulu instalasinya sesuai panduan yang dirujuk modul.
-
-Langkah 3. Membuat Workspace workspace-01
-
+### Langkah 3. Membuat Workspace workspace-01
 Pindah ke direktori tempat kamu ingin menyimpan project praktikum.
-
-Sebagai contoh, kamu bisa menggunakan direktori kerja di drive C.
-
-Jalankan:
-
-cd C:\
-
 Kemudian buat workspace:
-
 uv init workspace-01
-
 Setelah proses selesai, masuk ke direktori workspace:
-
 cd workspace-01
-
 Periksa isinya:
 
-Get-ChildItem
+<img src="images/08_BuatWorkspace.png" width="700">
 
 Penjelasan:
+Workspace merupakan direktori kerja yang digunakan untuk menyimpan file dan konfigurasi project. nama workspace yang digunakan adalah workspace-01.
 
-Workspace merupakan direktori kerja yang digunakan untuk menyimpan file dan konfigurasi project.
-
-Sesuai instruksi modul, nama workspace yang digunakan adalah workspace-01.
-
-Jika folder workspace-01 sudah ada, periksa isinya terlebih dahulu. Jangan menimpa file project yang sudah kamu kerjakan.
-
-Langkah 4. Menyiapkan Python 3.14
-
+### Langkah 4. Menyiapkan Python 3.14
 Di dalam direktori workspace-01, jalankan:
-
 uv python install 3.14
-
 Tunggu sampai proses instalasi selesai.
-
 Setelah itu, periksa versi Python yang dikelola oleh uv:
-
 uv run python --version
 
-Jika versi yang muncul belum sesuai, jangan lanjut ke tahap instalasi paket sebelum memperbaiki konfigurasi Python.
+<img src="images/09_PythonWorkspace.png" width="700">
 
 Penjelasan:
+Perintah tersebut digunakan untuk menyediakan versi Python yang diperlukan melalui uv.
 
-Modul meminta penggunaan Python versi 3.14. Perintah tersebut digunakan untuk menyediakan versi Python yang diperlukan melalui uv.
-
-Langkah 5. Membuat Environment
-
+### Langkah 5. Membuat Environment
 Masih di direktori workspace-01, jalankan:
-
 uv venv --python 3.14
-
 Perintah tersebut membuat virtual environment pada direktori .venv.
-
 Aktifkan environment menggunakan PowerShell:
-
 .\.venv\Scripts\Activate.ps1
+Jika berhasil, biasanya nama environment akan muncul pada awal prompt terminal
 
-Jika berhasil, biasanya nama environment akan muncul pada awal prompt terminal, misalnya:
-
-(.venv) PS C:\workspace-01>
-
-Lokasi direktori bisa berbeda sesuai tempat kamu menyimpan project.
-
-Jika PowerShell menolak aktivasi karena kebijakan eksekusi
-
-Jika muncul pesan yang menyatakan bahwa skrip tidak dapat dijalankan karena execution policy, gunakan cara berikut untuk sesi PowerShell saat ini:
-
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-
-Kemudian coba kembali:
-
-.\.venv\Scripts\Activate.ps1
-
-Pengaturan Process berlaku untuk sesi PowerShell tersebut, bukan mengubah kebijakan secara permanen.
+<img src="images/10_VenvPython.png" width="700">
 
 Penjelasan:
-
 Virtual environment digunakan untuk memisahkan paket yang dipasang untuk project ini dari paket Python lainnya.
-
 Dengan demikian, instalasi Strawberry untuk praktikum tidak perlu bercampur dengan lingkungan Python project lain.
 
-Langkah 6. Memasang Strawberry GraphQL
+### Langkah 6. Memasang Strawberry GraphQL
 
-Pastikan kamu berada di direktori workspace-01 dan environment telah aktif.
-
-Jalankan perintah yang tercantum pada modul:
-
+Pastikan berada di direktori workspace-01 dan environment telah aktif.
+Jalankan perintah :
 uv pip install 'strawberry-graphql[cli]'
-
 Tunggu sampai proses instalasi selesai.
-
 Kemudian periksa apakah Strawberry telah terpasang:
-
 uv pip show strawberry-graphql
 
+<img src="images/11_InstallStrawberry.png" width="700">
+
 Penjelasan:
+Paket strawberry-graphql[cli] digunakan untuk menyediakan library Strawberry beserta komponen CLI yang diperlukan dalam praktikum. Jumlah dan versi dependensi yang terpasang dapat berbeda tergantung kondisi lingkungan saat instalasi.
 
-Paket strawberry-graphql[cli] digunakan untuk menyediakan library Strawberry beserta komponen CLI yang diperlukan dalam praktikum.
-
-Jumlah dan versi dependensi yang terpasang dapat berbeda tergantung kondisi lingkungan saat instalasi.
-
-Screenshot yang perlu disimpan:
-
-Ambil screenshot terminal yang menunjukkan perintah instalasi dan hasilnya.
-
-Nama file yang disarankan:
-
-06_Install_Strawberry.png
-
-Langkah 7. Menyiapkan File schema.py
-
-Pada modul, terdapat instruksi untuk menjalankan source code yang sudah disediakan dengan nama schema.py. Setelah server dijalankan, modul meminta kamu mengakses GraphQL melalui browser.
-
-Penting: Bagian PDF yang kamu unggah menyebutkan file schema.py, tetapi kode sumbernya tidak terlihat pada halaman tersebut. Karena itu, saya tidak akan menganggap kode server tertentu sebagai kode asli dari dosen.
-
-Lakukan langkah berikut:
-
-Cari file schema.py yang disediakan dosen atau pada sumber materi praktikum.
-Salin file tersebut ke direktori workspace-01.
-Pastikan file berada di lokasi yang benar.
-Periksa file tersebut menggunakan editor seperti Visual Studio Code.
-
+### Langkah 7. Menyiapkan File schema.py
+jalankan source code yang sudah disediakan dengan nama schema.py. Setelah server dijalankan, modul meminta kamu mengakses GraphQL melalui browser.
 Struktur project yang diharapkan pada tahap ini:
 
-workspace-01/
-├── .venv/
-├── pyproject.toml
-├── uv.lock
-└── schema.py
-
-File uv.lock mungkin baru muncul setelah proses resolusi dependensi. Struktur sebenarnya dapat berbeda bergantung pada cara workspace dibuat dan dikelola.
+<img src="images/12_FileSchenema.png" width="700">
 
 Penjelasan:
+File schema.py merupakan kode server yang disediakan untuk praktikum. 
 
-File schema.py merupakan kode server yang disediakan untuk praktikum. Gunakan file tersebut agar hasil pengujian sesuai dengan materi yang diminta.
-
-Jika kamu belum memiliki file ini, jangan menganggap server sudah siap. Minta atau unduh file yang benar dari sumber materi praktikum.
-
-Langkah 8. Menjalankan GraphQL Server
-
+### Langkah 8. Menjalankan GraphQL Server
 Setelah file schema.py tersedia, buka terminal PowerShell di direktori workspace-01.
-
 Pastikan environment sudah aktif.
-
 Periksa bantuan CLI Strawberry:
-
-strawberry --help
-
-Jika perintah tersebut tersedia, periksa bantuan server:
-
-strawberry server --help
-
 Untuk file schema Python yang mendefinisikan objek schema, perintah CLI yang umum digunakan untuk menjalankan server adalah:
 
-strawberry server schema
+strawberry dev schema
 
 Perintah tersebut berlaku jika file schema.py sesuai dengan struktur yang diharapkan CLI Strawberry. Jika file yang diberikan dosen memiliki cara menjalankan yang berbeda, ikuti petunjuk pada file atau materi aslinya.
 
-Penjelasan:
+<img src="images/13_RunServer.png" width="700">
 
+Penjelasan:
 GraphQL server menyediakan layanan yang dapat diakses oleh client. Setelah server berjalan, biarkan terminal tersebut tetap terbuka.
 
-Jika server gagal dijalankan, periksa pesan error, keberadaan schema.py, dan konfigurasi schema sebelum melanjutkan.
-
-Screenshot yang perlu disimpan:
-
-Ambil screenshot terminal ketika server berhasil dijalankan.
-
-Nama file yang disarankan:
-
-07_GraphQL_Server.png
-
-Langkah 9. Membuka GraphQL melalui Browser
-
-Menurut modul, setelah server berjalan, buka browser dan akses:
-
+### Langkah 9. Membuka GraphQL melalui Browser
+setelah server berjalan, buka browser dan akses:
 GraphQL lokal
+Alamat localhost merujuk pada komputer yang sedang digunakan alamat 0.0.0.0 dapat diganti dengan localhost atau 127.0.0.1.
 
-Alamat localhost merujuk pada komputer yang sedang kamu gunakan. Modul juga menyebutkan bahwa alamat 0.0.0.0 dapat diganti dengan localhost atau 127.0.0.1.
+<img src="images/14_WebServer.png" width="700">
 
 Penjelasan:
-
 Jika server berjalan pada port 8000 dan endpoint /graphql tersedia, browser akan menampilkan antarmuka untuk mengirimkan query GraphQL.
 
-Jika halaman tidak dapat dibuka, pastikan:
-
-Server masih berjalan.
-Terminal server tidak mengalami error.
-Port yang digunakan benar.
-Endpoint /graphql tersedia pada server tersebut.
-
-Jangan menutup terminal server sebelum pengujian selesai.
-
-Screenshot yang perlu disimpan:
-
-Ambil screenshot antarmuka GraphQL pada browser.
-
-Nama file yang disarankan:
-
-08_GraphQL_Playground.png
-
-Langkah 10. Mengirimkan Query GraphQL
-
+### Langkah 10. Mengirimkan Query GraphQL
 Pada antarmuka GraphQL, modul meminta kamu memasukkan query berikut pada bagian kiri:
 
 {
@@ -396,26 +233,15 @@ Pada antarmuka GraphQL, modul meminta kamu memasukkan query berikut pada bagian 
 }
 
 Kemudian klik tombol Run.
+bagian kiri digunakan untuk menuliskan query, sedangkan bagian kanan menampilkan hasil query.
 
-Modul menjelaskan bahwa bagian kiri digunakan untuk menuliskan query, sedangkan bagian kanan menampilkan hasil query.
+<img src="images/15_MenjalankanQuery.png" width="700">
 
 Penjelasan:
-
 Query tersebut meminta data buku melalui field books, dengan informasi title dan author.
-
 Jika query berhasil, server akan mengembalikan hasil yang sesuai dengan data dan schema yang tersedia pada schema.py.
 
-Penting: Jangan menuliskan hasil buku tertentu sebelum kamu melihat respons sebenarnya dari server.
-
-Screenshot yang perlu disimpan:
-
-Ambil screenshot yang memperlihatkan query dan hasil respons dari server.
-
-Nama file yang disarankan:
-
-09_Query_GraphQL.png
-
-Langkah 11. Membuat Client untuk Mengakses GraphQL Server
+### Langkah 11. Membuat Client untuk Mengakses GraphQL Server
 
 Tugas terakhir pada modul adalah membuat client menggunakan bahasa pemrograman bebas. Client tersebut harus mengakses GraphQL server yang telah dibuat.
 
