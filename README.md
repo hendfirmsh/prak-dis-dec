@@ -39,7 +39,7 @@ Dokumentasi dibuat menggunakan **Markdown** agar laporan dapat dibaca langsung m
 | :----: | :---------------------: | :------------------: | :------------------------: |
 | **01** | Git dan GitHub          |      ✅ Selesai     | [📖 Modul 01](./01/)       |
 | **02** | Komunikasi Antar Proses |      ✅ Selesai     | [📖 Modul 02](./02/)       |
-| **03** | Praktikum Minggu 03     | ⏳ Belum dikerjakan | [📖 Modul 03](./03/)       |
+| **03** | Praktikum Minggu 03     |      ✅ Selesai     | [📖 Modul 03](./03/)       |
 | **04** | Praktikum Minggu 04     | ⏳ Belum dikerjakan | [📖 Modul 04](./04/)       |
 | **05** | Praktikum Minggu 05     | ⏳ Belum dikerjakan | [📖 Modul 05](./05/)       |
 | **06** | Praktikum Minggu 06     | ⏳ Belum dikerjakan | [📖 Modul 06](./06/)       |
@@ -194,7 +194,7 @@ Progress repository akan diperbarui setiap kali sebuah modul selesai dikerjakan.
 ```text
 Modul 01  ████████████████████  100%
 Modul 02  ████████████████████  100%
-Modul 03  ░░░░░░░░░░░░░░░░░░░░    0%
+Modul 03  ████████████████████  100%
 Modul 04  ░░░░░░░░░░░░░░░░░░░░    0%
 Modul 05  ░░░░░░░░░░░░░░░░░░░░    0%
 Modul 06  ░░░░░░░░░░░░░░░░░░░░    0%
